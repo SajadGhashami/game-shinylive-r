@@ -397,9 +397,9 @@ ui <- page_navbar(
               navset_card_underline(
                 full_screen = TRUE,
                 title = "Revenue Trend",
-                nav_panel("Weekly",
-                          plotlyOutput(outputId = "revenue_trend_week_output")
-                ),
+                # nav_panel("Weekly",
+                #           plotlyOutput(outputId = "revenue_trend_week_output")
+                # ),
                 nav_panel("Monthly",
                           plotlyOutput(outputId = "revenue_trend_month_output")
                 )
@@ -407,9 +407,9 @@ ui <- page_navbar(
               navset_card_underline(
                 full_screen = TRUE,
                 title = "Winnings Trend",
-                nav_panel("Weekly",
-                          plotlyOutput(outputId = "winning_trend_week_output")
-                ),
+                # nav_panel("Weekly",
+                #           plotlyOutput(outputId = "winning_trend_week_output")
+                # ),
                 nav_panel("Monthly",
                           plotlyOutput(outputId = "winning_trend_month_output")
                 )
@@ -417,9 +417,9 @@ ui <- page_navbar(
               navset_card_underline(
                 full_screen = TRUE,
                 title = "Profit Trend",
-                nav_panel("Weekly",
-                          plotlyOutput(outputId = "profit_trend_week_output")
-                ),
+                # nav_panel("Weekly",
+                #           plotlyOutput(outputId = "profit_trend_week_output")
+                # ),
                 nav_panel("Monthly",
                           plotlyOutput(outputId = "profit_trend_month_output")
                 )
