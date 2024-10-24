@@ -37,7 +37,7 @@ reasons <- c("game_bet purchase", "game_bet winnings")
 set.seed(123)
 
 # Number of rows (adjust as needed)
-n <- 50
+n <- 500
 
 # Generate the dataframe
 df <- tibble(
