@@ -37,7 +37,7 @@ reasons <- c("game_bet purchase", "game_bet winnings")
 set.seed(123)
 
 # Number of rows (adjust as needed)
-n <- 500
+n <- 50
 
 # Generate the dataframe
 df <- tibble(
@@ -428,77 +428,77 @@ ui <- page_navbar(
               col_widths = c(4, 4, 4),
             ),
             # 3th Row
-            layout_columns(
-              fill = FALSE,
-              value_box(
-                title = fluidRow( "Profit Margin",
-                                  HTML("&nbsp;"),
-                                  tooltip(bsicons::bs_icon("info-circle",
-                                                           title = ""),
-                                          "Profit divided by revenue. Zero Values are excluded from the graph")
-                ),
-                value = uiOutput("profitmargin_output"),
-                showcase = bsicons::bs_icon("bank")
-              ),
-              value_box(
-                title = fluidRow( "Number of Bets",
-                                  HTML("&nbsp;"),
-                                  tooltip(bsicons::bs_icon("info-circle",
-                                                           title = ""),
-                                          "Total Bets placed. Zero Values are excluded from the graph")
-                ),
-                value = uiOutput("numberofbets_output"),
-                showcase = bsicons::bs_icon("hash")
-              ),
-              value_box(
-                title = fluidRow( "% bets won",
-                                  HTML("&nbsp;"),
-                                  tooltip(bsicons::bs_icon("info-circle",
-                                                           title = ""),
-                                          "Percentage bets won. Zero Values are excluded from the graph")
-                ),
-                
-                value = uiOutput("percwon_output"),
-                showcase = bsicons::bs_icon("percent")
-              ),
-              col_widths = c(4, 4, 4)
-            ),
-            # 4th Row
-            layout_columns(
-              fill = FALSE,
-              navset_card_underline(
-                full_screen = TRUE,
-                title = "Profit Margin Trend",
-                nav_panel("Weekly",
-                          plotlyOutput(outputId = "profitmargin_trend_week_output")
-                ),
-                nav_panel("Monthly",
-                          plotlyOutput(outputId = "profitmargin_trend_month_output")
-                )
-              ),
-              navset_card_underline(
-                full_screen = TRUE,
-                title = "Number of Bets Trend",
-                nav_panel("Weekly",
-                          plotlyOutput(outputId = "numberofbets_trend_week_output")
-                ),
-                nav_panel("Monthly",
-                          plotlyOutput(outputId = "numberofbets_trend_month_output")
-                )
-              ),
-              navset_card_underline(
-                full_screen = TRUE,
-                title = "% bets won Trend",
-                nav_panel("Weekly",
-                          plotlyOutput(outputId = "percwon_trend_week_output")
-                ),
-                nav_panel("Monthly",
-                          plotlyOutput(outputId = "percwon_trend_month_output")
-                )
-              ),
-              
-              col_widths = c(4, 4, 4),
-            ),
+            # layout_columns(
+            #   fill = FALSE,
+            #   value_box(
+            #     title = fluidRow( "Profit Margin",
+            #                       HTML("&nbsp;"),
+            #                       tooltip(bsicons::bs_icon("info-circle",
+            #                                                title = ""),
+            #                               "Profit divided by revenue. Zero Values are excluded from the graph")
+            #     ),
+            #     value = uiOutput("profitmargin_output"),
+            #     showcase = bsicons::bs_icon("bank")
+            #   ),
+            #   value_box(
+            #     title = fluidRow( "Number of Bets",
+            #                       HTML("&nbsp;"),
+            #                       tooltip(bsicons::bs_icon("info-circle",
+            #                                                title = ""),
+            #                               "Total Bets placed. Zero Values are excluded from the graph")
+            #     ),
+            #     value = uiOutput("numberofbets_output"),
+            #     showcase = bsicons::bs_icon("hash")
+            #   ),
+            #   value_box(
+            #     title = fluidRow( "% bets won",
+            #                       HTML("&nbsp;"),
+            #                       tooltip(bsicons::bs_icon("info-circle",
+            #                                                title = ""),
+            #                               "Percentage bets won. Zero Values are excluded from the graph")
+            #     ),
+            #     
+            #     value = uiOutput("percwon_output"),
+            #     showcase = bsicons::bs_icon("percent")
+            #   ),
+            #   col_widths = c(4, 4, 4)
+            # ),
+            # # 4th Row
+            # layout_columns(
+            #   fill = FALSE,
+            #   navset_card_underline(
+            #     full_screen = TRUE,
+            #     title = "Profit Margin Trend",
+            #     nav_panel("Weekly",
+            #               plotlyOutput(outputId = "profitmargin_trend_week_output")
+            #     ),
+            #     nav_panel("Monthly",
+            #               plotlyOutput(outputId = "profitmargin_trend_month_output")
+            #     )
+            #   ),
+            #   navset_card_underline(
+            #     full_screen = TRUE,
+            #     title = "Number of Bets Trend",
+            #     nav_panel("Weekly",
+            #               plotlyOutput(outputId = "numberofbets_trend_week_output")
+            #     ),
+            #     nav_panel("Monthly",
+            #               plotlyOutput(outputId = "numberofbets_trend_month_output")
+            #     )
+            #   ),
+            #   navset_card_underline(
+            #     full_screen = TRUE,
+            #     title = "% bets won Trend",
+            #     nav_panel("Weekly",
+            #               plotlyOutput(outputId = "percwon_trend_week_output")
+            #     ),
+            #     nav_panel("Monthly",
+            #               plotlyOutput(outputId = "percwon_trend_month_output")
+            #     )
+            #   ),
+            #   
+            #   col_widths = c(4, 4, 4),
+            # ),
             layout_columns(
               fill = FALSE,
               navset_card_underline(
