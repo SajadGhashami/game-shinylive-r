@@ -1,0 +1,12 @@
+name: Game_Pickems
+title: Game_pickems
+username: sajadghashami
+account: sajadghashami
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 13127448
+bundleId: 9266751
+url: https://sajadghashami.shinyapps.io/Game_Pickems/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
